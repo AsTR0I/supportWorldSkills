@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            outline: none;
+            border: 1px solid black;
+        }
+        input:invalid:focus{
+            border: 2px red solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- forms -->
+
+<form action="#">
+
+    <!-- email -->
+    <label for="email_Id">email:</label>
+    <input type="email" name="email_name" id="email_Id" placeholder="email" required>
+
+    <!-- password -->
+    <label for="password_id">password:</label>
+    <input type="password" name="password_name" id="password_id" placeholder="password" required>
+
+    <!-- tel -->
+    <label for="tel_id">tel:</label>
+    <input type="tel" name="tel_name" id="tel_id" placeholder="phone" required minlength="11" maxlength="11" pattern="[0-9]{11}" title="11 цифр">
+
+    <button type="submit">Ok</button>
+</form>
+
+
+<form action="#">
+    <label for="yes_id">Yes</label>
+    <input type="radio" name="choice" id="yes_id" required>
+
+    <label for="no_id">No</label>
+    <input type="radio" name="choice" id="no_id"  required>
+</form>
+
+</body>
+</html>
+
