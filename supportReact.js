@@ -145,3 +145,34 @@ const [fileForUpload, setFileForUpload] = useState([]);
             }
         }
     };
+
+Если вы хотите передать параметры, как productId и name, без их отображения в URL при использовании функции navigate в React Router,
+можно воспользоваться объектом запроса. Вот пример того, как вы можете передавать параметры таким образом:
+import { useNavigate } from 'react-router-dom';
+
+// Внутри компонента или функции
+const navigate = useNavigate();
+
+const productId = 123;
+const productName = "example";
+
+navigate(`/products/edit`, {
+    state: { 
+        productId,
+        productName
+    }
+});
+import { useLocation } from 'react-router-dom';
+
+const ProductEditPage = () => {
+    const location = useLocation();
+    const { productId, productName } = location.state;
+
+    // Используйте productId и productName по необходимости
+
+    return (
+        <div>
+            {/* Ваш код компонента */}
+        </div>
+    );
+};
