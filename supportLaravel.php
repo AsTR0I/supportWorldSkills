@@ -217,3 +217,8 @@ public function filesPATCH($file_id,Request $request){
             }
         }
     }
+Route::prefix('api')->group(function () {
+    Route::get('/users', 'UserController@index');
+    Route::post('/users', 'UserController@store');
+    // Другие маршруты API здесь
+});
