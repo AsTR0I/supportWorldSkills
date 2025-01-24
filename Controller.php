@@ -30,7 +30,7 @@ class Controller extends BaseController
             [
                "message"=> "Login failed"
             ]
-        ]);
+        ], 403);
     }
 
     public function Forbiddenforyou(){
@@ -41,7 +41,7 @@ class Controller extends BaseController
             [
                "message" => "Forbidden for you"
             ]
-        ]);
+        ],403);
     }
 
     public function Notfound(){
